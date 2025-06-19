@@ -7,6 +7,8 @@ from app.main import app
 
 client = TestClient(app)
 
+# TODO: mockear la respuesta de OpenAI para evitar consumo de tokens reales en los tests
+# FIXME: este test depende de una conexión activa a internet y una API key válida
 def test_ask_chatbot():
     client.post("/init_user", params={"username": "test_user2", "role": "riesgos laborales"})
 

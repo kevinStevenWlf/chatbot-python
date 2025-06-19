@@ -13,6 +13,8 @@ from app.chatbot import ask_gpt
 router = APIRouter()
 
 @router.post("/ask")
+# TODO: extraer la lógica de llamada a OpenAI en un servicio separado para facilitar pruebas y mantenimiento
+# FIXME: la función ask() asume que el usuario existe, sin manejar múltiples sesiones o historial prolongado
 async def ask(username: str, message: str):
     """
     Envía una pregunta al chatbot y almacena la interacción en la base de datos.
@@ -39,6 +41,7 @@ async def ask(username: str, message: str):
         return {"response": response}
 
 @router.get("/history/{username}")
+# TODO: paginar o limitar el historial para evitar devolver grandes volúmenes de datos
 def history(username: str):
     """
     Recupera el historial de mensajes de un usuario específico.

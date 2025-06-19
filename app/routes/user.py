@@ -11,6 +11,8 @@ from app.database import engine
 
 router = APIRouter()
 
+# TODO: validar que el nombre de usuario no exista antes de crearlo
+# FIXME: actualmente se permite crear múltiples usuarios con el mismo nombre
 @router.post("/init_user")
 def create_user(username: str, role: str):
     """
