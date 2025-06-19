@@ -116,4 +116,4 @@ Puedes adaptarlo, mejorarlo y extenderlo a otros dominios.
 
 ### ✨ Autor
 
-Desarrollado por .
+Desarrollado por KevinStevenWlf https://kevinstevenwlf.github.io/curriculum/.
